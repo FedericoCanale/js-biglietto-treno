@@ -37,38 +37,38 @@ TOOL:
 
 // Creo una variabile per salvare i chilometri da percorrere
 // Creo una variabile per salvare l’età del passeggero
-// let km = prompt('Quanti chilometri vuoi percorrere?');
-// let eta = prompt('Quanti anni hai?');
+let km = prompt('Quanti chilometri vuoi percorrere?');
+let age = prompt('Quanti anni hai?');
 
 /* Calcoliamo il prezzo base del biglietto */
 
 // Creo una costante per il prezzo per km (0.21 €)
 // Calcolo il prezzo base moltiplicando i km per 0.21
-// const priceKm = 0.21;
-// let priceBase = km * priceKm;
+const priceKm = 0.21;
+let priceBase = km * priceKm;
 
 /* Applichiamo eventuali sconti in base all’età */
 
 // Se l’età è minore di 18 -> applico sconto 20%
-// if (eta < 18) {
-//     priceFinal = priceBase * 0.8;
-//     console.log('Hai diritto a uno sconto del 20%.');
-// }
+if (age < 18) {
+priceFinal = priceBase * 0.8;
+console.log('Hai diritto a uno sconto del 20%.');
+}
 
 // Se l’età è maggiore o uguale a 65 -> applico sconto 40%
-// else if (eta >= 65) {
-//     priceFinal = priceBase * 0.6;
-//     console.log('Hai diritto a uno sconto del 40%.');
-// }
+else if (age >= 65) {
+priceFinal = priceBase * 0.6;
+console.log('Hai diritto a uno sconto del 40%.');
+}
 
 // Altrimenti -> nessuno sconto
-// else {
-//     priceFinal = priceBase;
-//     console.log('Nessuno sconto applicato.');
-// }
+else {
+priceFinal = priceBase;
+console.log('Nessuno sconto applicato.');
+}
 
 /* Formattiamo e stampiamo il prezzo finale */
 
 // Arrotondo il prezzo finale a due decimali
 // Stampo il prezzo finale in console con due cifre decimali
-// console.log('Il prezzo finale del biglietto è: €' + prezzoFinale.toFixed(2));
+console.log('Il prezzo finale del biglietto è: €' + priceFinal.toFixed(2));
