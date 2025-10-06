@@ -51,13 +51,13 @@ let priceBase = km * priceKm;
 
 // Se l’età è minore di 18 -> applico sconto 20%
 if (age < 18) {
-priceFinal = priceBase * 0.8;
+priceFinal = (priceBase / 100)*20;
 console.log('Hai diritto a uno sconto del 20%.');
 }
 
 // Se l’età è maggiore o uguale a 65 -> applico sconto 40%
 else if (age >= 65) {
-priceFinal = priceBase * 0.6;
+priceFinal = (priceBase / 100)*60;
 console.log('Hai diritto a uno sconto del 40%.');
 }
 
