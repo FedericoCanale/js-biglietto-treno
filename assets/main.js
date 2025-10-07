@@ -37,8 +37,8 @@ TOOL:
 
 // Creo una variabile per salvare i chilometri da percorrere
 // Creo una variabile per salvare l’età del passeggero
-let km = prompt('Quanti chilometri vuoi percorrere?');
-let age = prompt('Quanti anni hai?');
+let km = Number(prompt('Quanti chilometri vuoi percorrere?'));
+let age = Number(prompt('Quanti anni hai?'));
 
 /* Calcoliamo il prezzo base del biglietto */
 
@@ -51,20 +51,20 @@ let priceBase = km * priceKm;
 
 // Se l’età è minore di 18 -> applico sconto 20%
 if (age < 18) {
-priceFinal = (priceBase / 100)*20;
-console.log('Hai diritto a uno sconto del 20%.');
+    priceFinal = (priceBase / 100) * 80;
+    console.log('Hai diritto a uno sconto del 20%.');
 }
 
 // Se l’età è maggiore o uguale a 65 -> applico sconto 40%
 else if (age >= 65) {
-priceFinal = (priceBase / 100)*60;
-console.log('Hai diritto a uno sconto del 40%.');
+    priceFinal = (priceBase / 100) * 60;
+    console.log('Hai diritto a uno sconto del 40%.');
 }
 
 // Altrimenti -> nessuno sconto
 else {
-priceFinal = priceBase;
-console.log('Nessuno sconto applicato.');
+    priceFinal = priceBase;
+    console.log('Nessuno sconto applicato.');
 }
 
 /* Formattiamo e stampiamo il prezzo finale */
